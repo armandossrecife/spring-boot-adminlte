@@ -57,12 +57,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         //add components
         auth.userDetailsService(userDetailsService).passwordEncoder(encoder);
         auth.jdbcAuthentication().dataSource(datasource);
-
+       
         // add new user "user" with password "password" - password will be encrypted
-        if(!userDetailsService.userExists("bruno")) {
+        if(!userDetailsService.userExists("armando")) {
             List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
             authorities.add(new SimpleGrantedAuthority("USER"));
-            User userDetails = new User("bruno", encoder.encode("1234"), authorities);
+            User userDetails = new User("armando", encoder.encode("armando"), authorities);
             userDetailsService.createUser(userDetails);
         }
     }

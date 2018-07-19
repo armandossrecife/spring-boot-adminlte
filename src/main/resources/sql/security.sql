@@ -11,3 +11,8 @@ CREATE TABLE authorities (
   UNIQUE INDEX authorities_idx_1 (username, authority)
 )
   ENGINE = InnoDb;
+
+ALTER TABLE users ADD id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    ADD INDEX (id);
+
+ALTER TABLE users AUTO_INCREMENT=1;
