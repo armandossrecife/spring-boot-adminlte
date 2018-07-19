@@ -43,6 +43,6 @@ Referências
 
 [9] Mysql 5. Sistema de Gerenciamento de Banco de Dados. Disponível em https://dev.mysql.com/downloads/mysql
 
-[10] AdminLTE. Template de painel de controle para aplicações web. Disponível em https://adminlte.io/themes/AdminLTE/documentation/index.html#plugins
+[10] AdminLTE. Template de painel de controle para aplicações web. Disponível em https://adminlte.io/themes/AdminLTE/index.html
 
 Dúvidas, sugestões ou críticas entre em contato via e-mail armando@ufpi.edu.br
