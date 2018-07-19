@@ -1,45 +1,84 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sd="http://www.thymeleaf.org/spring-data" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sd="http://www.thymeleaf.org/spring-data"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
 <head>
-    <title>Controle de Permissões</title>
+<title>Listagem de Repositórios</title>
 </head>
 <body>
-<section layout:fragment="header">
-<h1>Lista de Repositórios</h1>
-<ol class="breadcrumb">
-    <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-    <li class="active">Repositórios</li>
-</ol>
-</section>
-<div layout:fragment="content">
-    <div class="box">
-        <div class="box-header with-border">
-            <h3 class="box-title">Listagem</h3>
-            <div class="box-tools pull-right">
-                <a href="#" type="button" class="btn btn-box-tool"><i class="fa fa-plus"></i></a>
-                <br clear="all" />
-            </div>
-        </div>
-        <div class="box-body no-padding">
-            <table class="table table-striped">
-                <tr>
-                	<th>Cliente</th>
-                    <th>Repositórios</th>
-                </tr>
-				<tr>
-					<td>Cliente c1</td>
-					<td>Repositórios [r1, r2, ...]</td>
-				</tr>
+	<section layout:fragment="header">
+		<h1>Lista de Repositórios</h1>
+		<ol class="breadcrumb">
+			<li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+			<li class="active">Repositórios</li>
+		</ol>
+	</section>
+	<div layout:fragment="content">
+	
+		<div class="box">
+			<div class="box-header with-border">
+				<h3 class="box-title">Listagem</h3>
+				<div class="box-tools pull-right">
+					<a href="#" type="button" class="btn btn-box-tool"><i
+						class="fa fa-plus"></i></a> <br clear="all" />
+				</div>
+			</div>
+			<div class="box-body no-padding">
+				<table class="table table-striped">
 					<tr>
-					<td>Cliente c2</td>
-					<td>Repositórios [r1]</td>
-				</tr>
-				
-            </table>
-        </div>
-        <div class="box-footer clearfix">
-        </div>
-    </div>
-</div>
+						<th>Repositórios</th>
+						<th>Ações</th>
+					</tr>
+					<tr>
+						<td>[R1]</td>
+						<td><a th:href="${'#'}">A1</a> | <a th:href="${'#'}">A2</a> |
+							<a th:href="${'#'}">A3</a></td>
+					</tr>
+					<tr>
+						<td>[R2]</td>
+						<td><a th:href="${'#'}">A1</a> | <a th:href="${'#'}">A2</a> |
+							<a th:href="${'#'}">A3</a></td>
+					</tr>
+					<tr>
+						<td>...</td>
+						<td><a th:href="${'#'}">A1</a> | <a th:href="${'#'}">A2</a> |
+							<a th:href="${'#'}">A3</a></td>
+					</tr>
+					<tr>
+						<td>[Rn]</td>
+						<td><a th:href="${'#'}">A1</a> | <a th:href="${'#'}">A2</a> |
+							<a th:href="${'#'}">A3</a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="box-footer clearfix"></div>
+		</div>
+		
+		<!-- Componentes visuais -->
+		
+		<!-- Caixa de Loading (análise de compilação) -->
+		<div class="row">
+			<div class="col-md-6">
+				<div class="box box-default">
+					<div class="box-header with-border">
+						<h3 class="box-title">Analisando e compilando os dados</h3>
+					</div>
+					<div class="box-body">The body of the box</div>
+					<!-- /.box-body -->
+					<!-- Loading (remove the following to stop the loading)-->
+					<div class="overlay">
+						<i class="fa fa-refresh fa-spin"></i>
+					</div>
+					<!-- end loading -->
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col -->
+		</div>
+		<!-- Fim da caixa de Loading (análise e compilação) -->
+		
+		<!-- Fim dos componentes visuais -->
+	</div>
 </body>
 </html>
